@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 def print_matrix_integer(matrix=[[]]):
     lm = len(matrix[0])
     for row in range(len(matrix)):
