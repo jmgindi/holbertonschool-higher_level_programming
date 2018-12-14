@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
-    if type(roman_string) is not str:
+    if type(roman_string) is not str or len(roman_string) == 0:
         return None
     answer = 0
     convert = {'I': 1, 'V': 5, 'X': 10, 'L': 50,
