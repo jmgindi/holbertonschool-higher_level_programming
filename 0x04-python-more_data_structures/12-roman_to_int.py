@@ -2,7 +2,7 @@
 def roman_to_int(roman_string):
     if type(roman_string) is not str or \
        len(roman_string) == 0 or \
-       not roman_string:
+       roman_string is None:
         return None
     answer = 0
     convert = {'I': 1, 'V': 5, 'X': 10, 'L': 50,
