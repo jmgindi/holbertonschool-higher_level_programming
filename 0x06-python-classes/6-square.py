@@ -8,7 +8,7 @@ class Square:
         position (obj:`int`): offset of square
     """
 
-    def __init__(self, size=0, position=(0,0)):
+    def __init__(self, size=0, position=(0, 0)):
         """Init function for square class
 
         Args:
