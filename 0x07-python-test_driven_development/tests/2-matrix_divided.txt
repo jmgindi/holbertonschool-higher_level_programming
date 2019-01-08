@@ -1,0 +1,63 @@
+The ``2-matrix_divided`` module
+======================
+
+Using ``matrix_divided``
+-------------------
+importing module:
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+int matrix / int:
+    >>> matrix_divided([[2, 4, 6], [8, 10, 12]], 2)
+    [[1.0, 2.0, 3.0], [4.0, 5.0, 6.0]]
+
+float matrix / int:
+    >>> matrix_divided([[2.5, 4.4, 6.4], [8.1, 10.2, 12.5]], 2)
+    [[1.25, 2.2, 3.2], [4.05, 5.1, 6.25]]
+
+int matrix / float:
+    >>> matrix_divided([[5, 10, 15], [15, 15, 10]], 2.5)
+    [[2.0, 4.0, 6.0], [6.0, 6.0, 4.0]]
+
+different lengths of lists:
+    >>> matrix_divided([[2, 4, 6], [8, 10, 12, 5]], 2)
+    Traceback (most recent call last):
+    	      ...
+    TypeError: Each row of the matrix must have the same size
+
+negative input:
+    >>> matrix_divided([[2, 4, 6], [8, 10, 12]], -2)
+    [[-1.0, -2.0, -3.0], [-4.0, -5.0, -6.0]]
+
+infinite input:
+    >>> matrix_divided([[float('inf'), 2], [3, 5]], 1)
+    [[inf, 2.0], [3.0, 5.0]]
+ 
+Divide by zero:
+    >>> matrix_divided([[2, 4, 6], [8, 10, 12]], 0)
+    Traceback (most recent call last):
+      		...
+    ZeroDivisionError: division by zero
+
+string input as divisor:
+    >>> matrix_divided([[2, 4, 6], [8, 10, 12]], 'Holberton')
+    Traceback (most recent call last):
+      		...
+    TypeError: div must be a number
+
+matrix has wrong type:
+    >>> matrix_divided([[2, 4, 6], [8, 'Hi', 12]], 2)
+    Traceback (most recent call last):
+    	      ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+too few args:
+    >>> matrix_divided([[2, 4, 6], [8, 'Hi', 12]])
+    Traceback (most recent call last):
+    	      ...
+    TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+too many args:
+    >>> matrix_divided(1, 2, 3)
+    Traceback (most recent call last):
+    	      ...
+    TypeError: matrix_divided() takes 2 positional arguments but 3 were given
