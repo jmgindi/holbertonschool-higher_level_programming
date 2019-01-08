@@ -1,5 +1,16 @@
 #!/usr/bin/python3
+"""
+Module 2-matrix_divided contains one function:
+matrix_divided(matrix, div)
+"""
 def matrix_divided(matrix, div):
+    """ matrix_divided returns a new matrix containing
+    all elements from matrix divided by div
+
+    Args:
+        matrix: matrix to divide. must have equal-length rows
+        div: divisor. must be int != 0
+    """
     if type(matrix) is not list or len(matrix) < 2:
         raise TypeError("matrix must be a matrix (list of lists)" \
                         " of integers/floats")
