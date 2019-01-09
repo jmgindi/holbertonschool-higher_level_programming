@@ -17,7 +17,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_type(self):
         with self.assertRaises(TypeError):
-            max_integer("Holberton")
+            max_integer(["Holberton", 7, 9, 15])
 
     def test_negatives(self):
         self.assertEqual(max_integer([-6, 3, -21, 1]), 3)
