@@ -1,0 +1,49 @@
+The ``7-base_geometry`` module
+======================
+
+Using ``BaseGeometry``
+-------------------
+importing module:
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+init BaseGeometry:
+    >>> bg = BaseGeometry()
+
+try using area():
+    >>> bg = BaseGeometry()
+    >>> bg.area()
+    Traceback (most recent call last):
+    	      ...
+    Exception: area() is not implemented
+
+standard usage of integer_validator:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("age", 15)
+
+string as value in integer_validator:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("age", "Fifteen")
+    Traceback (most recent call last):
+    	      ...
+    TypeError: age must be an integer
+
+value < 0 in integer_validator:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("age", -12)
+    Traceback (most recent call last):
+    	      ...
+    ValueError: age must be greater than 0
+
+value = 0 in integer_validator:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("age", 0)
+    Traceback (most recent call last):
+    	      ...
+    ValueError: age must be greater than 0
+
+value is float in integer_validator:
+    >>> bg = BaseGeometry()
+    >>> bg.integer_validator("age", 12.135)
+    Traceback (most recent call last):
+    	      ...
+    TypeError: age must be an integer
