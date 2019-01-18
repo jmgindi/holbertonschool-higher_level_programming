@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import json
 """
 module contains 1 function:
     class_to_json
