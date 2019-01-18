@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import json
 """
 module contains 1 class:
     Student
