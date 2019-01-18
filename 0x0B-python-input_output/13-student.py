@@ -45,6 +45,6 @@ class Student:
         """ sets attributes of a Student from json file
 
         Args:
-            json: json file to read
+            json: json dict to read
         """
         self.__dict__ = json
