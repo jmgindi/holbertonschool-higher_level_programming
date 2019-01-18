@@ -4,6 +4,7 @@ module contains 1 function:
     write_file
 """
 
+
 def write_file(filename="", text=""):
     """ write file writes text to file at filename.
     if the file does not exist, it creates a new one.

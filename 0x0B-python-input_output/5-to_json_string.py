@@ -5,6 +5,7 @@ module contains 1 function:
     to_json_string
 """
 
+
 def to_json_string(my_obj):
     """ returns a JSON representation of my_obj
 

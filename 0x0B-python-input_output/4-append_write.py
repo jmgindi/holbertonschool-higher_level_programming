@@ -4,6 +4,7 @@ module contains 1 function:
     append_write
 """
 
+
 def append_write(filename="", text=""):
     """ appends text to the end of the file at
     filename

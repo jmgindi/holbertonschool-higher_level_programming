@@ -5,6 +5,7 @@ module contains 1 class:
     Student
 """
 
+
 class Student:
     """ student class
 
@@ -19,7 +20,7 @@ class Student:
         Args:
             first_name: first name
             last_name: last name
-            age: age 
+            age: age
         """
         self.first_name = first_name
         self.last_name = last_name
@@ -38,4 +39,5 @@ class Student:
         for element in attrs:
             if type(element) is not str:
                 return self.__dict__
-        return {key:value for (key,value) in self.__dict__.items() if key in attrs}
+        return {key: value for (key, value)
+                in self.__dict__.items() if key in attrs}

@@ -5,6 +5,7 @@ module contains 1 function:
     load_from_json_file
 """
 
+
 def load_from_json_file(filename):
     """ loads an object from a json file
 

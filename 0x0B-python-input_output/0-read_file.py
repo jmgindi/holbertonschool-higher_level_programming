@@ -4,6 +4,7 @@ module contains 1 function:
     read_file
 """
 
+
 def read_file(filename=""):
     """ reads a file
 
