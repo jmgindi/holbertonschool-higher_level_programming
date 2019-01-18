@@ -20,7 +20,9 @@ def pascal_triangle(n):
             triangle[i] = [1]
         if i == 1:
             triangle[i] = [1, 1]
-        else:
+        if i == n <= 2:
+            return triangle
+        elif i >= 2:
             triangle[i].append(1)
             triangle[i].extend(
                 triangle[i - 1][ii] + triangle[i - 1][ii + 1]
