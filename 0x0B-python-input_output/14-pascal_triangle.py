@@ -11,7 +11,7 @@ def pascal_triangle(n):
     Args:
         n: size of triangle
     """
-    triangle = [[] for x in range(n)] 
+    triangle = [[] for x in range(n)]
     if n <= 0:
         return []
     triangle[0] = [1]
@@ -24,7 +24,7 @@ def pascal_triangle(n):
             triangle[i].append(1)
             triangle[i].extend(
                 triangle[i - 1][ii] + triangle[i - 1][ii + 1]
-                 for ii in range(i - 1))
+                for ii in range(i - 1))
             triangle[i].append(1)
 
     return triangle
