@@ -4,6 +4,7 @@ module contains 1 class:
     Student
 """
 
+
 class Student:
     """ student class
 
@@ -37,7 +38,8 @@ class Student:
         for element in attrs:
             if type(element) is not str:
                 return self.__dict__
-        return {key:value for (key,value) in self.__dict__.items() if key in attrs}
+        return {key:value for (key,value)
+                in self.__dict__.items() if key in attrs}
 
     def reload_from_json(self, json):
         """ sets attributes of a Student from json file
@@ -45,4 +47,4 @@ class Student:
         Args:
             json: json file to read
         """
-        
+        self.__dict__ = json
