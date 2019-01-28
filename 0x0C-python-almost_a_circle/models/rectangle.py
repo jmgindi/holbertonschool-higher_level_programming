@@ -1,9 +1,10 @@
 #!/usr/bin/python3
 from models.base import Base
-""" 
+"""
 module contains 1 class:
     Rectangle
 """
+
 
 class Rectangle(Base):
     """ rectangle class - inherits from Base
