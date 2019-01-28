@@ -11,6 +11,7 @@ from models.rectangle import Rectangle
 unittest module for rectangle class
 """
 
+
 class TestIntValidator(unittest.TestCase):
     """ TestCase for checking the int validator
     """
@@ -111,6 +112,7 @@ class TestIntValidator(unittest.TestCase):
         with self.assertRaises(ValueError):
             self.rect.y = -1
 
+
 class TestRectangle(unittest.TestCase):
     """ Rectangle TestCase for other functions
     """
@@ -154,8 +156,8 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(self.rect.width, 5)
 
     def testWidthSetter(self):
-       """ tests the width setter
-       """
+        """ tests the width setter
+        """
         self.rect.width = 2
         self.assertEqual(self.rect.width, 2)
 
@@ -367,8 +369,7 @@ class TestRectangle(unittest.TestCase):
             '[{"id": 3, "width": 5, "height": 5, "x": 1, "y": 1}]'
         )
         self.assertEqual(d,
-                         [{"id": 3, "width": 5, "height": 5, "x": 1, "y": 1}]
-        )
+                         [{"id": 3, "width": 5, "height": 5, "x": 1, "y": 1}])
 
     def testFromJSONNonString(self):
         """ tests from_json_string with a bad

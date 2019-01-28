@@ -12,6 +12,7 @@ from models.square import Square
 unittest module for square class
 """
 
+
 class TestSquare(unittest.TestCase):
     """ TestCase class for square class
     """
@@ -28,7 +29,7 @@ class TestSquare(unittest.TestCase):
         self.sqr = Square(5, 7, 1)
 
     def testBadInit(self):
-        """ tests a zero argument init 
+        """ tests a zero argument init
         """
         with self.assertRaises(TypeError):
             r = Square()
@@ -61,7 +62,7 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(self.sqr.size, 5)
 
     def testSizeSetter(self):
-        """ tests size setter 
+        """ tests size setter
         """
         self.sqr.size = 3
         self.assertEqual(self.sqr.size, 3)
@@ -263,8 +264,7 @@ class TestSquare(unittest.TestCase):
             '[{"id": 3, "size": 5, "x": 1, "y": 1}]'
         )
         self.assertEqual(d,
-                         [{"id": 3, "size": 5, "x": 1, "y": 1}]
-        )
+                         [{"id": 3, "size": 5, "x": 1, "y": 1}])
 
     def testFromJSONNonString(self):
         """ tests a bad type into from_json_string
