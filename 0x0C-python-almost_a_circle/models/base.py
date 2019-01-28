@@ -29,6 +29,8 @@ class Base:
 
     @classmethod
     def nbreset(cls):
+        """ resets __nb_objects for unittesting
+        """
         cls.__nb_objects = 0
 
     @staticmethod
