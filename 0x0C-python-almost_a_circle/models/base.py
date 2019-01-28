@@ -5,6 +5,7 @@ module contains 1 class:
     Base
 """
 
+
 class Base:
     """ Base keeps track of the number of objects
 
