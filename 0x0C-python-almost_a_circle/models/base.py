@@ -49,11 +49,11 @@ class Base:
         """ saves a list of objects of a class to a .json file
         """
         if list_objs is None:
-            jsonstr = "[]"
+            jstr = "[]"
         else:
-            jsonstr = cls.to_json_string([o.to_dictionary() for o in list_objs])
+            jstr = cls.to_json_string([o.to_dictionary() for o in list_objs])
         with open(cls.__name__ + ".json", "w") as f:
-            f.write(jsonstr)
+            f.write(jstr)
 
     @staticmethod
     def from_json_string(json_string):
