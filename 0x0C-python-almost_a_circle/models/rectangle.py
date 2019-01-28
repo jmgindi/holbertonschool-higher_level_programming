@@ -28,8 +28,7 @@ class Rectangle(Base):
             str(self.__width) + "/" + str(self.__height)
         )
 
-    @staticmethod
-    def int_validator(key, value):
+    def int_validator(self, key, value):
         """ simple value validator with error handling
 
         Args:
@@ -38,10 +37,12 @@ class Rectangle(Base):
         """
         if type(value) is not int:
             raise TypeError(key + " must be an integer")
-        elif key is "width" or key is "height" and value <= 0:
-            raise ValueError(key + " must be > 0")
-        elif key is "x" or key is "y" and value < 0:
-            raise ValueError(key + " must be >= 0")
+        elif key is "width" or key is "height":
+            if value <= 0:
+                raise ValueError(key + " must be > 0")
+        elif key is "x" or key is "y":
+            if value < 0:
+                raise ValueError(key + " must be >= 0")
 
     @property
     def width(self):
@@ -57,7 +58,7 @@ class Rectangle(Base):
         return self.__height
 
     @height.setter
-    def width(self, value):
+    def height(self, value):
         self.int_validator("height", value)
         self.__height = value
 
@@ -84,11 +85,11 @@ class Rectangle(Base):
         """
         return self.__width * self.__height
 
-
     def display(self):
         """ prints the rectangle in "#"s
         """
-        print("\n" * (self.__y - 1))
+        if self.__y > 0:
+            print("\n" * (self.__y), end="")
         for c in range(self.__height):
             print(" " * self.__x + "#" * self.__width)
 

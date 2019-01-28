@@ -19,7 +19,8 @@ class Square(Rectangle):
             y: y offset
             id: id for object, or none
         """
-        super().__init__(size, size, x, y)
+        super().__init__(size, size, x, y, id)
+        self.size = size
 
     def __str__(self):
         """ str replacement for square
@@ -38,6 +39,7 @@ class Square(Rectangle):
     def size(self, value):
         self.width = value
         self.height = value
+        self.__size = value
 
     def update(self, *args, **kwargs):
         """ updates a square with new values
@@ -49,7 +51,7 @@ class Square(Rectangle):
         elif kwargs:
             for att, arg in kwargs.items():
                 if att in allowed:
-                    setattr(self, key, value)
+                    setattr(self, att, arg)
 
     def to_dictionary(self):
         """ returns a dictionary representation of a square
@@ -59,5 +61,5 @@ class Square(Rectangle):
             k.replace("_Rectangle__", "").replace(
                 "_Square__", ""
             ): v for k, v in self.__dict__.items()
-            if k not in ['width', 'height']
+            if k not in ["_Rectangle__width", "_Rectangle__height"]
         }

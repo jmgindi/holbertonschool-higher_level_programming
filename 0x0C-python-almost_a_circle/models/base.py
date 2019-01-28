@@ -23,8 +23,12 @@ class Base:
         if id is not None:
             self.id = id
         else:
-            self.__nb_objects += 1
-            self.id = self.__nb_objects
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
+
+    @classmethod
+    def nbreset(cls):
+        cls.__nb_objects = 0
 
     @staticmethod
     def to_json_string(list_dictionaries):
@@ -56,7 +60,7 @@ class Base:
     def create(cls, **dictionary):
         """ creates an object from a dictionary
         """
-        o = cls(0, 0, 0)
+        o = cls(3, 3, 3)
         o.update(**dictionary)
         return o
 
