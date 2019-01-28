@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+unittest module for rectangle class
+"""
 import unittest
 import json
 import os
@@ -7,9 +10,6 @@ import io
 from contextlib import redirect_stdout
 from models.base import Base
 from models.rectangle import Rectangle
-"""
-unittest module for rectangle class
-"""
 
 
 class TestIntValidator(unittest.TestCase):

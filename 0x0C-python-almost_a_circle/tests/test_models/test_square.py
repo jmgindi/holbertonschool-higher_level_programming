@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+from models.square import Square
+"""
+unittest module for square class
+"""
 import unittest
 import json
 import os
@@ -7,10 +11,6 @@ import io
 from contextlib import redirect_stdout
 from models.base import Base
 from models.rectangle import Rectangle
-from models.square import Square
-"""
-unittest module for square class
-"""
 
 
 class TestSquare(unittest.TestCase):

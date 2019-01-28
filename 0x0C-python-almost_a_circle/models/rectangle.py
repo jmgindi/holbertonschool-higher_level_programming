@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-from models.base import Base
 """
 module contains 1 class:
     Rectangle
 """
+from models.base import Base
 
 
 class Rectangle(Base):

@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-import unittest
-import json
-from models.base import Base
 """
 unittest module for Base class
 """
+import unittest
+import json
+from models.base import Base
 
 
 class TestBase(unittest.TestCase):
