@@ -1,4 +1,4 @@
-#!/usr/bin/env/python3
+#!/usr/bin/python3
 """This script updates the state with id 2
 to name="New Mexico" in hbtn_0e_6_usa
 """

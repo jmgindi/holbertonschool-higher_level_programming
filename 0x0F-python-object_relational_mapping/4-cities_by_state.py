@@ -1,4 +1,4 @@
-#!/usr/bin/env/python3
+#!/usr/bin/python3
 """ This script selects all cities from the database hbtn_0e_4_usa
 """
 

@@ -1,4 +1,4 @@
-#!/usr/bin/env/python3
+#!/usr/bin/python3
 """ This script selects all states from the database hbtn_0e_0_usa
 whose names start with N
 """

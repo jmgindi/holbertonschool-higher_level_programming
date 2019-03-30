@@ -1,4 +1,4 @@
-#!/usr/bin/env/python3
+#!/usr/bin/python3
 """This script adds Louisiana to states in hbtn_0e_6_usa
 """
 
