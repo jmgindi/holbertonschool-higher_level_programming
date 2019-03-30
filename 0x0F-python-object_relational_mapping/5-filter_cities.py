@@ -12,11 +12,10 @@ if __name__ == "__main__":
     cur = db.cursor()
     cur.execute("""SELECT cities.name FROM cities
                 JOIN states ON state_id = states.id
-                WHERE state.name = {}
+                WHERE states.name = %s
                 ORDER BY cities.id ASC""", (argv[4],))
     cities = cur.fetchall()
-    for city in cities:
-        print(city)
+    print(", ".join([city_name for city in cities for city_name in city]))
 
     cur.close()
     db.close()
