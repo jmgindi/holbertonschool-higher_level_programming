@@ -16,6 +16,7 @@ class State(Base):
         name: string of max 128 chars not null
     """
 
+    __tablename__ = "states"
     id = Column(Integer, autoincrement=True,
                     nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)
