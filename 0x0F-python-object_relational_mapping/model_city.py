@@ -2,7 +2,7 @@
 """This module contains 1 class:
     City
 """
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from model_state import Base, State
 
@@ -19,4 +19,4 @@ class City(Base):
     id = Column(Integer, autoincrement=True,
                     nullable=False, primary_key=True)
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, nullable=False, ForeignKey('states.id'))
+    state_id = Column(Integer, ForeignKey('states.id'), nullable=False)
