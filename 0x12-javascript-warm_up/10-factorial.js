@@ -1,5 +1,5 @@
 #!/usr/bin/node
-function factorial(n) {
+function factorial (n) {
   if (n === 0 || !Number(n)) {
     return 1;
   } else {
