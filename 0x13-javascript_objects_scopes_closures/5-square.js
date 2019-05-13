@@ -20,10 +20,10 @@ class Rectangle {
     this.width = this.width * 2;
     this.height = this.height * 2;
   }
-};
+}
 
 module.exports = class Square extends Rectangle {
-  constructor(size) {
+  constructor (size) {
     super(size, size);
   }
 };
